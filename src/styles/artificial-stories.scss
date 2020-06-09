@@ -1,0 +1,81 @@
+@import "variables";
+@import "global";
+
+header {
+  padding-top: 10em;
+  font-family: $heading-font;
+  align-items: start;
+
+  .dropdown {
+    grid-area: dropdown;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: $accent-one;
+  }
+  h1 {
+    grid-area: heading;
+    padding: 0;
+    margin: 0;
+    text-align: end;
+    color: $accent-dark;
+  }
+  img {
+    width: 100%;
+    grid-area: image;
+  }
+  display: grid;
+  grid-template-areas:
+    "dropdown heading"
+    "image image";
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $light-grey;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    padding: 1em;
+    margin: 0;
+  }
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.article-container:last-child {
+  margin-bottom: 6em;
+}
+
+article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 6em;
+  .img-container {
+    display: inline-block;
+  }
+  .article-text {
+    display: inline-block;
+    padding-left: 1em;
+    border-left: 2px solid $accent-one;
+    p {
+      font-size: 1.2em;
+      color: $dark-grey;
+    }
+  }
+  // stops red border from extending past text
+  .article-text > :nth-child(1) {
+    margin-top: 0;
+  }
+  .article-text p:last-child {
+    margin-bottom: 0;
+  }
+}
