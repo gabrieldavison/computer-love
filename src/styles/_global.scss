@@ -1,0 +1,27 @@
+// Sets document to use border-box for sizing
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+//Sets size of content
+.content-wrapper {
+  width: 960px;
+  margin: auto;
+}
+
+body {
+  font-family: $body-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $heading-font;
+}

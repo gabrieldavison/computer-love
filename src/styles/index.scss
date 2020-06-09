@@ -1,3 +1,46 @@
-h1 {
-  color: red;
+@import "variables";
+@import "global";
+
+// Sets document to use border box for sizing
+
+body {
+  font-family: $heading-font;
+}
+.content-wrapper {
+  background-image: url("https://i.ibb.co/Yy8cN7Y/splash-final.png");
+  background-repeat: no-repeat;
+  background-size: 1500px;
+  background-position: 150px;
+}
+
+.article-links {
+  a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2.5em;
+    color: $dark-grey;
+    padding: 0.3em 0;
+  }
+  a:hover {
+    color: $accent-one;
+  }
+  margin: 3em 0;
+}
+
+.img-wrapper {
+  text-align: end;
+  margin-right: 1.7em;
+  margin-top: 2em;
+}
+
+footer {
+  color: $light-grey;
+  text-align: right;
+  border-top: 5px solid $accent-dark;
+
+  h1 {
+    font-size: 1.9em;
+    letter-spacing: 1.3em;
+    padding-bottom: 0.2em;
+  }
 }
