@@ -1,54 +1,9 @@
+@use "header";
 @import "variables";
 @import "global";
 
-header {
-  padding-top: 10em;
-  font-family: $heading-font;
-  align-items: start;
-
-  .dropdown {
-    grid-area: dropdown;
-  }
-  a {
-    display: inline-block;
-    text-decoration: none;
-    color: $accent-one;
-  }
-  h1 {
-    grid-area: heading;
-    padding: 0;
-    margin: 0;
-    text-align: end;
-    color: $accent-dark;
-  }
-  img {
-    width: 100%;
-    grid-area: image;
-  }
-  display: grid;
-  grid-template-areas:
-    "dropdown heading"
-    "image image";
-}
-.dropdown {
-  position: relative;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: $light-grey;
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    padding: 1em;
-    margin: 0;
-  }
-}
-.dropdown:hover .dropdown-content {
-  display: block;
+.content-wrapper {
+  width: 100%;
 }
 
 .article-container:last-child {
@@ -56,11 +11,12 @@ header {
 }
 
 article {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 6em;
-  .img-container {
-    display: inline-block;
+  margin-top: 4em;
+  .image-container {
+    text-align: center;
+  }
+  img {
+    margin-bottom: 2em;
   }
   .article-text {
     display: inline-block;
@@ -77,5 +33,23 @@ article {
   }
   .article-text p:last-child {
     margin-bottom: 0;
+  }
+}
+@media all and (min-width: 768px) {
+  article {
+    margin-top: 6em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .content-wrapper {
+    width: 95%;
+    margin: 0 2.5%;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .content-wrapper {
+    width: 960px;
+    margin: auto;
   }
 }

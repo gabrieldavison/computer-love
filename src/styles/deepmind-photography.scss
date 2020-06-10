@@ -1,0 +1,28 @@
+@use "header";
+@import "variables";
+@import "global";
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 5em;
+  img {
+    width: 450px;
+    margin-top: 3em;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: grey;
+}

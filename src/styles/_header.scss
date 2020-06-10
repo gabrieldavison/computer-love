@@ -1,0 +1,30 @@
+@import "variables";
+header {
+  padding-top: 10em;
+  font-family: $heading-font;
+  align-items: start;
+
+  .dropdown {
+    grid-area: dropdown;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: $accent-one;
+  }
+  h1 {
+    grid-area: heading;
+    padding: 0;
+    margin: 0;
+    text-align: end;
+    color: $accent-dark;
+  }
+  img {
+    width: 100%;
+    grid-area: image;
+  }
+  display: grid;
+  grid-template-areas:
+    "dropdown heading"
+    "image image";
+}
